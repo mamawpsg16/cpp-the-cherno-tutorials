@@ -1,0 +1,59 @@
+﻿  Precompiled.cpp
+  ArrowOperator.cpp
+  AutoKeyword.cpp
+  Benchmarking.cpp
+  Casting.cpp
+  CopyingAndCopyConstructor.cpp
+  DynamicArrayVector.cpp
+  DynamicArrayVectorOptimization.cpp
+  DynamicCasting.cpp
+  DynamicLibrary.cpp
+  FunctionPointers.cpp
+  LambdaAnonymousFunction.cpp
+  Macros.cpp
+  MultidimensionalArrays.cpp
+  MultipleReturnValue.cpp
+  Namespace.cpp
+  NamespaceExample.cpp
+  ShardPointerExample.cpp
+  Sorting.cpp
+  StackVsHeap.cpp
+  StaticArrays.cpp
+  Generating Code...
+  Compiling...
+  StructuredBindings.cpp
+  Templates.cpp
+  Threads.cpp
+  Timing.cpp
+  TypePunning.cpp
+  Unions.cpp
+  UniqueAndMakeUniquePtr.cpp
+  UnorderedMapExample.cpp
+  UsingLibrariesStaticLinking.cpp
+  LocalStatic.cpp
+  ObjectLifetime.cpp
+  SmartPointers.cpp
+  SmartPointersExample.cpp
+  Const.cpp
+  CreateInstantiateObject.cpp
+  ImplicitExplicitKeyword.cpp
+  InterfacesPureVirtualFunction.cpp
+  old-main.cpp
+  MemberIntializerList.cpp
+C:\Users\Maricar Lacap\Downloads\KAM - Copy\cpp-indepth-the-cherno\TheChernoC++\TheChernoC++\src\old-main.cpp(7,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Mutable.cpp
+  Generating Code...
+  Compiling...
+  NewKeyword.cpp
+  OperatorsAndOperatorOverloading.cpp
+  Static.cpp
+  Ternary.cpp
+  ThisKeyword.cpp
+  VirtualFunction.cpp
+  Visibility.cpp
+  VirtualDestructors.cpp
+  Generating Code...
+  PrecompiledMain.cpp
+MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+C:\Users\Maricar Lacap\Downloads\KAM - Copy\cpp-indepth-the-cherno\TheChernoC++\Dependencies\GLFW\lib-vc2015\glfw3.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\Maricar Lacap\Downloads\KAM - Copy\cpp-indepth-the-cherno\TheChernoC++\bin\x64\Debug\TheChernoC++.exe : fatal error LNK1120: 1 unresolved externals
