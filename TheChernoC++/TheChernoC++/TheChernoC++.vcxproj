@@ -171,7 +171,7 @@
     <ClCompile Include="AutoKeyword.cpp" />
     <ClCompile Include="Benchmarking.cpp" />
     <ClCompile Include="Casting.cpp" />
-    <ClCompile Include="CopyingAndCopyConstructor.cpp" />
+    <ClCompile Include="CopyConstructorAndCopyAssignment.cpp" />
     <ClCompile Include="DynamicArrayVector.cpp" />
     <ClCompile Include="DynamicArrayVectorOptimization.cpp" />
     <ClCompile Include="DynamicCasting.cpp" />
@@ -198,11 +198,17 @@
     </ClCompile>
     <ClCompile Include="ShardPointerExample.cpp" />
     <ClCompile Include="Sorting.cpp" />
+    <ClCompile Include="src\ArgumentEvaluation.cpp" />
     <ClCompile Include="src\Async.cpp" />
     <ClCompile Include="src\AsyncVsThread.cpp" />
+    <ClCompile Include="src\LvaluesAndRvalues.cpp" />
     <ClCompile Include="src\MakeStringFaster.cpp" />
+    <ClCompile Include="src\MoveSemantics.cpp" />
     <ClCompile Include="src\MultipleTypeInSingleVariable.cpp" />
+    <ClCompile Include="src\Singleton.cpp" />
+    <ClCompile Include="src\SmallStringOptimization.cpp" />
     <ClCompile Include="src\StoreAnyTypeInVariable.cpp" />
+    <ClCompile Include="src\TrackMemoryAllocationsTheEasyWay.cpp" />
     <ClCompile Include="StackVsHeap.cpp" />
     <ClCompile Include="StaticArrays.cpp" />
     <ClCompile Include="StructuredBindings.cpp" />

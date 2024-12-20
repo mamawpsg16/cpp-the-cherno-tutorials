@@ -66,7 +66,7 @@
     <ClCompile Include="SmartPointersExample.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CopyingAndCopyConstructor.cpp">
+    <ClCompile Include="CopyConstructorAndCopyAssignment.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ArrowOperator.cpp">
@@ -181,6 +181,24 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\MakeStringFaster.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Singleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SmallStringOptimization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TrackMemoryAllocationsTheEasyWay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LvaluesAndRvalues.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ArgumentEvaluation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MoveSemantics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

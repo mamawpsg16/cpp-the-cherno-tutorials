@@ -1,2 +1,69 @@
-﻿  MakeStringFaster.cpp
-  TheChernoC++.vcxproj -> C:\Users\Maricar Lacap\Downloads\KAM - Copy\cpp-indepth-the-cherno\TheChernoC++\bin\Win32\Debug\TheChernoC++.exe
+﻿  Precompiled.cpp
+  ArrowOperator.cpp
+  AutoKeyword.cpp
+  Benchmarking.cpp
+  Casting.cpp
+  CopyConstructorAndCopyAssignment.cpp
+  DynamicArrayVector.cpp
+  DynamicArrayVectorOptimization.cpp
+  DynamicCasting.cpp
+  DynamicLibrary.cpp
+  FunctionPointers.cpp
+  LambdaAnonymousFunction.cpp
+  Macros.cpp
+  MultidimensionalArrays.cpp
+  MultipleReturnValue.cpp
+  Namespace.cpp
+  NamespaceExample.cpp
+  OptionalData.cpp
+  ShardPointerExample.cpp
+  Sorting.cpp
+  ArgumentEvaluation.cpp
+  Generating Code...
+  Compiling...
+  Async.cpp
+  AsyncVsThread.cpp
+  LvaluesAndRvalues.cpp
+  MakeStringFaster.cpp
+  MoveSemantics.cpp
+  MultipleTypeInSingleVariable.cpp
+  Singleton.cpp
+  SmallStringOptimization.cpp
+  StoreAnyTypeInVariable.cpp
+  TrackMemoryAllocationsTheEasyWay.cpp
+  StackVsHeap.cpp
+  StaticArrays.cpp
+  StructuredBindings.cpp
+  Templates.cpp
+  Threads.cpp
+  Timing.cpp
+  TypePunning.cpp
+  Unions.cpp
+  UniqueAndMakeUniquePtr.cpp
+  UnorderedMapExample.cpp
+  Generating Code...
+  Compiling...
+  UsingLibrariesStaticLinking.cpp
+  LocalStatic.cpp
+  ObjectLifetime.cpp
+  SmartPointers.cpp
+  SmartPointersExample.cpp
+  Const.cpp
+  CreateInstantiateObject.cpp
+  ImplicitExplicitKeyword.cpp
+  InterfacesPureVirtualFunction.cpp
+  old-main.cpp
+  MemberIntializerList.cpp
+  Mutable.cpp
+  NewKeyword.cpp
+  OperatorsAndOperatorOverloading.cpp
+  Static.cpp
+  Ternary.cpp
+  ThisKeyword.cpp
+  VirtualFunction.cpp
+  Visibility.cpp
+  VirtualDestructors.cpp
+  Generating Code...
+  PrecompiledMain.cpp
+  LINK : C:\Users\kevin.mensah\Desktop\cpp-the-cherno-tutorials\TheChernoC++\bin\Win32\Debug\TheChernoC++.exe not found or not built by the last incremental link; performing full link
+  TheChernoC++.vcxproj -> C:\Users\kevin.mensah\Desktop\cpp-the-cherno-tutorials\TheChernoC++\bin\Win32\Debug\TheChernoC++.exe
