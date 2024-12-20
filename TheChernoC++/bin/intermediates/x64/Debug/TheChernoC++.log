@@ -1,3 +1,2 @@
 ﻿  MoveSemantics.cpp
-C:\Users\kevin.mensah\Desktop\cpp-the-cherno-tutorials\TheChernoC++\TheChernoC++\src\MoveSemantics.cpp(14,22): warning C4267: '=': conversion from 'size_t' to 'uint32_t', possible loss of data
   TheChernoC++.vcxproj -> C:\Users\kevin.mensah\Desktop\cpp-the-cherno-tutorials\TheChernoC++\bin\x64\Debug\TheChernoC++.exe

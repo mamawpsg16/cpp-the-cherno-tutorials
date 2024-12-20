@@ -24,7 +24,7 @@ public:
 	//which means you can't assign one User object to another User object (e.g., using u1 = u2;).
 	//User& operator=(const User& other) = delete; // DONT ALLOW COPY ASSIGNMENT OPERATOR
 
-	// Copy Constructor
+	// Copy Constructor ( DEEP )
 	User(const User& other) : stringSize(other.stringSize) {
 		std::cout << "COPIED" << '\n';
 		m_name = new char[stringSize + 1];
@@ -32,7 +32,7 @@ public:
 		m_name[stringSize] = '\0'; // Null-terminate the string
 	}
 
-	// Copy Assignment Operator
+	// Copy Assignment Operator ( DEEP )
 	User& operator=(const User& other) {
 		if (this != &other) { // Avoid self-assignment
 			delete[] m_name; // Free existing resource
