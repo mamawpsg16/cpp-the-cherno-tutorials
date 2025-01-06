@@ -199,16 +199,28 @@
     <ClCompile Include="ShardPointerExample.cpp" />
     <ClCompile Include="Sorting.cpp" />
     <ClCompile Include="src\ArgumentEvaluation.cpp" />
+    <ClCompile Include="src\ArrayIteratorExample.cpp" />
     <ClCompile Include="src\Async.cpp" />
     <ClCompile Include="src\AsyncVsThread.cpp" />
+    <ClCompile Include="src\BinaryAndBitwiseOperators.cpp" />
+    <ClCompile Include="src\ConversionOperator.cpp" />
+    <ClCompile Include="src\Iterators.cpp" />
     <ClCompile Include="src\LvaluesAndRvalues.cpp" />
     <ClCompile Include="src\MakeStringFaster.cpp" />
+    <ClCompile Include="src\MakingArrayDataStructure.cpp" />
+    <ClCompile Include="src\MakingIterator.cpp" />
+    <ClCompile Include="src\MakingVectorArray.cpp" />
+    <ClCompile Include="src\MapAndUnorderedMap.cpp" />
     <ClCompile Include="src\MoveSemantics.cpp" />
     <ClCompile Include="src\MultipleTypeInSingleVariable.cpp" />
+    <ClCompile Include="src\NULL.cpp" />
+    <ClCompile Include="src\SharedPointerExample.cpp" />
     <ClCompile Include="src\Singleton.cpp" />
     <ClCompile Include="src\SmallStringOptimization.cpp" />
     <ClCompile Include="src\StoreAnyTypeInVariable.cpp" />
     <ClCompile Include="src\TrackMemoryAllocationsTheEasyWay.cpp" />
+    <ClCompile Include="src\UniversityAssignment.cpp" />
+    <ClCompile Include="src\WeakPointer.cpp" />
     <ClCompile Include="StackVsHeap.cpp" />
     <ClCompile Include="StaticArrays.cpp" />
     <ClCompile Include="StructuredBindings.cpp" />
@@ -246,6 +258,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="src\Array.h" />
+    <ClInclude Include="src\Vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -84,33 +84,33 @@ private:
 	String m_string;
 };
 
-int main() {
-	/*String str("Kevin Mensah");
-	str.printString();*/
-
-	// MOVE CONSTRUCTOR
-	//Entity entity = String("Kevin Mensah");
-	/*Entity entity("Kevin Mensah"); 
-	entity.print();*/
-
-	// MOVE ASSIGNMENT
-	
-	/* THIS TRIGGERS MOVE CONSTRUCTOR INSTEAD AS THE entity1 is not already an object*/
-	//Entity entity1 = (String&&)entity;
-	//Entity entity1 = std::move(entity);
-
-	/* MOVE ASSIGNMENT OPERATOR */
-	String apple = "APPLE";
-	String dest; 
-	std::cout << "Apple :" << '\n';
-	apple.printString();
-	std::cout << "Dest :" << '\n';
-	dest.printString();
-
-	dest = std::move(apple);
-
-	std::cout << "Apple :" << '\n';
-	apple.printString();
-	std::cout << "Dest :" << '\n';
-	dest.printString();
-}
+//int main() {
+//	/*String str("Kevin Mensah");
+//	str.printString();*/
+//
+//	// MOVE CONSTRUCTOR
+//	//Entity entity = String("Kevin Mensah");
+//	/*Entity entity("Kevin Mensah"); 
+//	entity.print();*/
+//
+//	// MOVE ASSIGNMENT
+//	
+//	/* THIS TRIGGERS MOVE CONSTRUCTOR INSTEAD AS THE entity1 is not already an object*/
+//	//Entity entity1 = (String&&)entity;
+//	//Entity entity1 = std::move(entity);
+//
+//	/* MOVE ASSIGNMENT OPERATOR */
+//	String apple = "APPLE";
+//	String dest; 
+//	std::cout << "Apple :" << '\n';
+//	apple.printString();
+//	std::cout << "Dest :" << '\n';
+//	dest.printString();
+//
+//	dest = std::move(apple);
+//
+//	std::cout << "Apple :" << '\n';
+//	apple.printString();
+//	std::cout << "Dest :" << '\n';
+//	dest.printString();
+//}

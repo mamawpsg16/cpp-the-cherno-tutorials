@@ -4,6 +4,7 @@
 #include <string>
 
 class File {
+private:
     std::string filename;
 
 public:
