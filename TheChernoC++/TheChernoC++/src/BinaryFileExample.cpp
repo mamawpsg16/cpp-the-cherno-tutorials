@@ -1,94 +1,100 @@
 #include <iostream>
-#include <fstream>
 #include <vector>
-#include <string>
+#include <fstream>
+#include <stdexcept>
 
-void showTasks(const std::vector<std::string>& tasks)
-{
-    std::cout << "\nTo-Do List:" << std::endl;
-    for (int i = 0; i < tasks.size(); ++i)
-    {
-        std::cout << i + 1 << ". " << tasks[i] << std::endl;
-    }
-}
-
-void saveTasksBinary(const std::vector<std::string>& tasks, const std::string& filename)
-{
-    std::ofstream outputFile(filename, std::ios::binary);
-
-    // Write the number of tasks
-    size_t taskCount = tasks.size();
-    outputFile.write(reinterpret_cast<const char*>(&taskCount), sizeof(taskCount));
-
-    // Write each task's length and content
-    for (const auto& task : tasks)
-    {
-        size_t length = task.size();
-        outputFile.write(reinterpret_cast<const char*>(&length), sizeof(length));
-        outputFile.write(task.c_str(), length);
+// Save tasks to a binary file
+void saveTasksToBinaryFile(const std::vector<std::string>& tasks, const std::string& filename) {
+    std::ofstream file(filename, std::ios::binary);
+    if (!file.is_open()) {
+        throw std::runtime_error("Error: Could not open file for writing.");
     }
 
-    outputFile.close();
+    // Write the number of tasks to the file
+    size_t tasksSize = tasks.size();
+    file.write(reinterpret_cast<const char*>(&tasksSize), sizeof(tasksSize));
+    if (!file) {
+        throw std::runtime_error("Error: Failed to write tasks size to file.");
+    }
+
+    // Write each task to the file
+    for (const auto& task : tasks) {
+        size_t taskLength = task.size();
+        file.write(reinterpret_cast<const char*>(&taskLength), sizeof(taskLength));
+        if (!file) {
+            throw std::runtime_error("Error: Failed to write task length to file.");
+        }
+
+        file.write(task.c_str(), taskLength);
+        if (!file) {
+            throw std::runtime_error("Error: Failed to write task content to file.");
+        }
+    }
+
+    file.close();
 }
 
-void loadTasksBinary(std::vector<std::string>& tasks, const std::string& filename)
-{
-    std::ifstream inputFile(filename, std::ios::binary);
+// Read tasks from a binary file
+void readTasksFromBinaryFile(const std::string& filename, std::vector<std::string>& tasks) {
+    std::ifstream file(filename, std::ios::binary);
+    if (!file.is_open()) {
+        throw std::runtime_error("Error: Could not open file for reading.");
+    }
 
-    // Read the number of tasks
-    size_t taskCount;
-    inputFile.read(reinterpret_cast<char*>(&taskCount), sizeof(taskCount));
+    // Read the number of tasks from the file
+    size_t tasksSize;
+    file.read(reinterpret_cast<char*>(&tasksSize), sizeof(tasksSize));
+    if (!file) {
+        throw std::runtime_error("Error: Failed to read tasks size from file.");
+    }
 
-    // Read each task's length and content
-    for (size_t i = 0; i < taskCount; ++i)
-    {
-        size_t length;
-        inputFile.read(reinterpret_cast<char*>(&length), sizeof(length));
+    tasks.clear();
+    tasks.reserve(tasksSize);
 
-        std::string task(length, '\0');
-        inputFile.read(&task[0], length);
+    // Read each task from the file
+    for (size_t i = 0; i < tasksSize; ++i) {
+        size_t taskLength;
+        file.read(reinterpret_cast<char*>(&taskLength), sizeof(taskLength));
+        if (!file) {
+            throw std::runtime_error("Error: Failed to read task length from file.");
+        }
+
+        std::string task(taskLength, '\0');
+        file.read(&task[0], taskLength);
+        if (!file) {
+            throw std::runtime_error("Error: Failed to read task content from file.");
+        }
 
         tasks.push_back(task);
     }
 
-    inputFile.close();
+    file.close();
 }
 
-//int main()
-//{
-//    std::vector<std::string> tasks;
-//    std::string task;
-//    char choice;
-//
-//    // Load existing tasks from binary file
-//    loadTasksBinary(tasks, "tasks.dat");
-//
-//    do
-//    {
-//        std::cout << "\nA - Add a task" << std::endl;
-//        std::cout << "V - View tasks" << std::endl;
-//        std::cout << "Q - Quit" << std::endl;
-//        std::cout << "Enter your choice: ";
-//        std::cin >> choice;
-//
-//        switch (choice)
-//        {
-//        case 'A':
-//        case 'a':
-//            std::cout << "Enter a task: ";
-//            std::cin.ignore(); // Clears the input buffer
-//            getline(std::cin, task);
-//            tasks.emplace_back(task);
-//            break;
-//        case 'V':
-//        case 'v':
-//            showTasks(tasks);
-//            break;
-//        }
-//    } while (choice != 'Q' && choice != 'q');
-//
-//    // Save tasks to binary file
-//    saveTasksBinary(tasks, "tasks.dat");
-//
-//    return 0;
-//}
+int main() {
+    try {
+        // Define tasks and filename
+        std::vector<std::string> tasks = { "C++", "NOTEPAD", "Binary File Example" };
+        std::string filename = "tasks_file.dat";
+
+        // Save tasks to binary file
+        saveTasksToBinaryFile(tasks, filename);
+        std::cout << "Tasks successfully saved to binary file.\n";
+
+        // Read tasks from binary file
+        std::vector<std::string> loadedTasks;
+        readTasksFromBinaryFile(filename, loadedTasks);
+        std::cout << "Tasks successfully loaded from binary file:\n";
+
+        // Display loaded tasks
+        for (const auto& task : loadedTasks) {
+            std::cout << "- " << task << "\n";
+        }
+    }
+    catch (const std::exception& e) {
+        std::cerr << e.what() << std::endl;
+        return 1;
+    }
+
+    return 0;
+}

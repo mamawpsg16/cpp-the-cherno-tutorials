@@ -38,7 +38,7 @@ void processData(void* data) {
 	std::cout << "Processed data: " << *num << "\n";
 }
 
-int main() {
+//int main() {
 	//double value = 5.25;
 
 	//int a = (int)value; //EXPLICIT CONVERSION
@@ -58,7 +58,7 @@ int main() {
 	//You're working with polymorphic types.
 	//You need to check object types at runtime.
 
-	Base* basePtr = new Derived;   // Upcast to Base
+	//Base* basePtr = new Derived;   // Upcast to Base
 	//Derived* dPtr = dynamic_cast<Derived*>(basePtr);  // Downcast
 
 	//if (dPtr) {
@@ -106,12 +106,12 @@ int main() {
 
 	//std::cout << b->y << "\n";  // Undefined behavior
 
-	int value2 = 42;
+	//int value2 = 42;
 
 	 //Store data in void*
-	void* rawData = &value2;
+	//void* rawData = &value2;
 
 	 //Cast back and process
-	processData(rawData);
-
-}
+//	processData(rawData);
+//
+//}
