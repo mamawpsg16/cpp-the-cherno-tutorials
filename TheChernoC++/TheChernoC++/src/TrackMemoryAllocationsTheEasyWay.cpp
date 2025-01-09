@@ -11,17 +11,17 @@ struct AllocationMetrics {
 
 static AllocationMetrics s_allowMetrics;
 
-void* operator new(size_t size) {
-	s_allowMetrics.totalAllocated += size;
-
-	return malloc(size);
-}
-
-void operator delete(void* memory, size_t size) {
-	s_allowMetrics.totalFreed += size;
-
-	return free(memory);
-}
+//void* operator new(size_t size) {
+//	s_allowMetrics.totalAllocated += size;
+//
+//	return malloc(size);
+//}
+//
+//void operator delete(void* memory, size_t size) {
+//	s_allowMetrics.totalFreed += size;
+//
+//	return free(memory);
+//}
 
 static void printMemoryUsage() {
 	std::cout << "Memory Usage: " << s_allowMetrics.currentUsage() << "bytes \n";

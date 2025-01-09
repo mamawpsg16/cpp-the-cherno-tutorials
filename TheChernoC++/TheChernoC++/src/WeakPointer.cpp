@@ -54,8 +54,8 @@ public:
 };
 
 
-int main()
-{
+//int main()
+//{
    /* {
         auto sp = std::make_shared<int>(42);
         gw = sp;
@@ -77,18 +77,18 @@ int main()
     //std::cout << "Object Count After Out of scoped to Manager " << obj.use_count() << '\n';
 
     /* Object* obj */
-    {
-        std::shared_ptr<Object> obj = std::make_shared<Object>();
-        manager.obj = obj;
-        manager.func();
-    }
-    manager.func();
+    //{
+    //    std::shared_ptr<Object> obj = std::make_shared<Object>();
+    //    manager.obj = obj;
+    //    manager.func();
+    //}
+    //manager.func();
     //std::cout << "Manager Object " << manager.obj << '\n';
 
-    auto a = std::make_shared<A>();
-    auto b = std::make_shared<B>();
+    //auto a = std::make_shared<A>();
+    //auto b = std::make_shared<B>();
 
-    a->bPtr = b; // A owns B
-    b->aPtr = a; // B observes A without owning it
+    //a->bPtr = b; // A owns B
+    //b->aPtr = a; // B observes A without owning it
 
-}
+//}

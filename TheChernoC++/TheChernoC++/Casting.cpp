@@ -33,11 +33,13 @@ void printNonConst(char* str) {
 }
 
 void processData(void* data) {
+	std::cout<< "DATA" << data << '\n';
 	int* num = reinterpret_cast<int*>(data);  // Cast back to original type
 	std::cout << "Processed data: " << *num << "\n";
 }
 
-//int main() {
+int main() {
+	//double value = 5.25;
 
 	//int a = (int)value; //EXPLICIT CONVERSION
 	//double a = (int)value + 3.25; //EXPLICIT CONVERSION
@@ -48,15 +50,15 @@ void processData(void* data) {
 	/* STATIC CAST */
 	//Types are known and guaranteed at compile time.
 	//You need to avoid runtime overhead.
-	/*double value = 5.25;
-	double s = static_cast<int>(value) + 3.3;
-	std::cout << s << '\n';*/
+	
+	//double s = static_cast<int>(value) + 3.3;
+	//std::cout << s << '\n';
 
 	/* DYNAMIC CAST*/
 	//You're working with polymorphic types.
 	//You need to check object types at runtime.
 
-	//Base* basePtr = new Derived;   // Upcast to Base
+	Base* basePtr = new Derived;   // Upcast to Base
 	//Derived* dPtr = dynamic_cast<Derived*>(basePtr);  // Downcast
 
 	//if (dPtr) {
@@ -85,7 +87,7 @@ void processData(void* data) {
 	/* REINTERPRET_CAST */
 	
 	//int x = 42;
-	// Reinterpret int* as char*
+	 //Reinterpret int* as char*
 	//char* p = reinterpret_cast<char*>(&x);
 
 	//std::cout << "Value as char: " << *p << "\n";  // Shows the first byte of the int
@@ -104,12 +106,12 @@ void processData(void* data) {
 
 	//std::cout << b->y << "\n";  // Undefined behavior
 
-	//int value = 42;
+	int value2 = 42;
 
-	// Store data in void*
-	//void* rawData = &value;
+	 //Store data in void*
+	void* rawData = &value2;
 
-	// Cast back and process
-	//processData(rawData);
+	 //Cast back and process
+	processData(rawData);
 
-//}
+}

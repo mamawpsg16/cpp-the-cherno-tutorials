@@ -203,7 +203,9 @@
     <ClCompile Include="src\Async.cpp" />
     <ClCompile Include="src\AsyncVsThread.cpp" />
     <ClCompile Include="src\BinaryAndBitwiseOperators.cpp" />
+    <ClCompile Include="src\BinaryFileExample.cpp" />
     <ClCompile Include="src\ConversionOperator.cpp" />
+    <ClCompile Include="src\CurrencyConverter.cpp" />
     <ClCompile Include="src\Iterators.cpp" />
     <ClCompile Include="src\LvaluesAndRvalues.cpp" />
     <ClCompile Include="src\MakeStringFaster.cpp" />
@@ -218,6 +220,7 @@
     <ClCompile Include="src\Singleton.cpp" />
     <ClCompile Include="src\SmallStringOptimization.cpp" />
     <ClCompile Include="src\StoreAnyTypeInVariable.cpp" />
+    <ClCompile Include="src\TodoList.cpp" />
     <ClCompile Include="src\TrackMemoryAllocationsTheEasyWay.cpp" />
     <ClCompile Include="src\UniversityAssignment.cpp" />
     <ClCompile Include="src\WeakPointer.cpp" />

@@ -71,10 +71,12 @@ private:
     // Find an available index for insertion (linear probing)
     int getInsertedEntryIndex(const std::string& entry) {
         int index = getIndex(entry);  // Get the starting index
+        std::cout << "UPDATED INDEX" << index << '\n';
         while (true) {
             if (m_entries[index].status == "never used" || m_entries[index].status == "tombstone") {
                 return index;  // Return if slot is empty or previously deleted
             }
+            std::cout << "CONDITION NOT MET" << index << '\n';
             index = (index + 1) % Size;  // Linear probing
         }
         return -1;  // Should never reach here
@@ -88,7 +90,7 @@ private:
 //int main() {
 //    std::string input;
 //
-//    std::cout << "Enter input (e.g., Aapple Dapple Aorange): ";
+//    std::cout << "Enter input (e.g., Aapple Dapple Aorange Abanana): ";
 //    std::getline(std::cin, input);  // Read entire line of input
 //
 //    HashTable hashTable;
@@ -100,6 +102,7 @@ private:
 //
 //        // Extract the operation (A or D) and the entry
 //        std::string entry = token.substr(1);  // Extract string after first character
+//        std::cout << entry << '\n';
 //        if (token[0] == 'A') {                // Add entry if 'A' is the prefix
 //            hashTable.addEntry(entry);
 //        }
